@@ -21,6 +21,6 @@ jobs:
       with:
         name: my-artifact
         path: .
-    needs: [checkout_and_execute_code]
+    needs: [test]
 
   
