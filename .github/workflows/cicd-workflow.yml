@@ -1,0 +1,23 @@
+name: Python CICD
+
+on: push
+
+jobs:
+  checkout_and_execute_code:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the repo
+      uses: actions/checkout@main
+    - name: Execute the python script
+      run: python hello.py
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the repo
+      uses: actions/checkout@main
+    - name: Create an artifact
+      uses: actions/upload-artifact@v1.0.0
+    needs: [checkout_and_execute_code]
+
+  
