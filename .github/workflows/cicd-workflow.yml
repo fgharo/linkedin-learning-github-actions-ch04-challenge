@@ -3,7 +3,7 @@ name: Python CICD
 on: push
 
 jobs:
-  checkout_and_execute_code:
+  test:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout the repo
