@@ -20,6 +20,7 @@ jobs:
       uses: actions/upload-artifact@v1.0.0
       with:
         name: my-artifact
+        path: .
     needs: [checkout_and_execute_code]
 
   
